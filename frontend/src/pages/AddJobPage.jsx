@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom'
 // import { toast } from "react-toastify";
 // import { navigate } from "@reach/router";
 
@@ -9,6 +10,9 @@ const AddJobPage = () => {
   const [companyName, setCompanyName] = useState("");
   const [contactEmail, setContactEmail] = useState("");
   const [contactPhone, setContactPhone] = useState("");
+
+  const navigate = useNavigate();
+
   
   const submitForm = (e) => {
     e.preventDefault();
@@ -29,7 +33,7 @@ const AddJobPage = () => {
 
     // toast.success("Job Added Successfully");
 
-    // return navigate("/jobs");
+    navigate("/");
 
   };
 
